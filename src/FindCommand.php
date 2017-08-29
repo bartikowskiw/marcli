@@ -18,16 +18,21 @@ class FindCommand extends Command {
         $this
             ->setName( 'marc:find' )
             ->setDescription( 'Finds records.' )
-            ->addArgument( 'tag', InputArgument::REQUIRED )
             ->addArgument( 'needle', InputArgument::REQUIRED )
             ->addArgument( 'marc-file', InputArgument::OPTIONAL, 'Path to MARC file', 'php://stdin' )
+            ->addOption( 'tag', 't', InputOption::VALUE_REQUIRED, 'Marc Tag', '...' )
+            ->addOption( 'ind1', NULL, InputOption::VALUE_REQUIRED, 'Indicator 1', '.' )
+            ->addOption( 'ind2', NULL, InputOption::VALUE_REQUIRED, 'Indicator 2', '.' )
+            ->addOption( 'sub', 's', InputOption::VALUE_REQUIRED, 'Subfield', '.' )
             ->addOption( 'raw', 'r', InputOption::VALUE_NONE, 'Raw MARC output?' );
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
         $mask = new MarcMask(
-                    $input->getArgument( 'tag' ),
-                    '.', '.', '.*',
+                    $input->getOption( 'tag' ),
+                    $input->getOption( 'ind1' ),
+                    $input->getOption( 'ind2' ),
+                    $input->getOption( 'sub' ),
                     $input->getArgument( 'needle' )
                 );
 
