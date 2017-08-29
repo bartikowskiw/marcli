@@ -1,0 +1,28 @@
+{
+    "name": "umlts/marcli",
+    "description": "MARC file toolset",
+    "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Waldemar Bartikowski",
+            "email": "bartikowskiw@missouri.edu"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Umlts\\Marcli\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://vcs.missouri.edu/umlts/composer_repository/raw/master/packages.json"
+        }
+    ],
+    "require": {
+        "umlts/marc_toolset": "@dev",
+        "symfony/console": "^3.3"
+    }
+}
