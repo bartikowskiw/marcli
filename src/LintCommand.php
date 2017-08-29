@@ -16,7 +16,7 @@ class LintCommand extends Command {
         $this
             ->setName( 'marc:lint' )
             ->setDescription( 'Checks records in a MARC file for errors.' )
-            ->addArgument( 'marc-file', InputArgument::REQUIRED, 'Path to MARC file' );
+            ->addArgument( 'marc-file', InputArgument::OPTIONAL, 'Path to MARC file', 'php://stdin' );
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {

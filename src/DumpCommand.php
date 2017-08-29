@@ -17,7 +17,7 @@ class DumpCommand extends Command {
         $this
             ->setName( 'marc:dump' )
             ->setDescription( 'Dumps the content of a MARC file in human-readable form.' )
-            ->addArgument( 'marc-file', InputArgument::REQUIRED, 'Path to MARC file' );
+            ->addArgument( 'marc-file', InputArgument::OPTIONAL, 'Path to MARC file', 'php://stdin' );
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
