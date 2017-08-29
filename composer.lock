@@ -277,20 +277,20 @@
         },
         {
             "name": "symfony/console",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201"
+                "reference": "d6596cb5022b6a0bd940eae54a1de78646a5fda6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/b0878233cb5c4391347e5495089c7af11b8e6201",
-                "reference": "b0878233cb5c4391347e5495089c7af11b8e6201",
+                "url": "https://api.github.com/repos/symfony/console/zipball/d6596cb5022b6a0bd940eae54a1de78646a5fda6",
+                "reference": "d6596cb5022b6a0bd940eae54a1de78646a5fda6",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": "^5.5.9|>=7.0.8",
                 "symfony/debug": "~2.8|~3.0",
                 "symfony/polyfill-mbstring": "~1.0"
             },
@@ -303,7 +303,6 @@
                 "symfony/dependency-injection": "~3.3",
                 "symfony/event-dispatcher": "~2.8|~3.0",
                 "symfony/filesystem": "~2.8|~3.0",
-                "symfony/http-kernel": "~2.8|~3.0",
                 "symfony/process": "~2.8|~3.0"
             },
             "suggest": {
@@ -342,24 +341,24 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-29 21:27:59"
+            "time": "2017-08-27 14:52:21"
         },
         {
             "name": "symfony/debug",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13"
+                "reference": "084d804fe35808eb2ef596ec83d85d9768aa6c9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
-                "reference": "7c13ae8ce1e2adbbd574fc39de7be498e1284e13",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/084d804fe35808eb2ef596ec83d85d9768aa6c9d",
+                "reference": "084d804fe35808eb2ef596ec83d85d9768aa6c9d",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": "^5.5.9|>=7.0.8",
                 "psr/log": "~1.0"
             },
             "conflict": {
@@ -398,7 +397,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-07-28 15:27:31"
+            "time": "2017-08-27 14:52:21"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -465,7 +464,7 @@
             "source": {
                 "type": "git",
                 "url": "https://vcs.missouri.edu/umlts/phplib/marc_toolset.git",
-                "reference": "d18b1b447253a6969f47245bf562840999817505"
+                "reference": "7915cdaeabe2b4e475fa4ee585f8d5fd1ae19d04"
             },
             "require": {
                 "pear/file_marc": "^1.1",
@@ -486,7 +485,7 @@
                     "email": "bartikowskiw@missouri.edu"
                 }
             ],
-            "time": "2017-08-28 18:34:29"
+            "time": "2017-08-29 17:05:29"
         }
     ],
     "packages-dev": [],
