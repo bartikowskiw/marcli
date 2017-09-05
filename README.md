@@ -1,4 +1,4 @@
-= MARC CLI Tools
+# MARC CLI Tools
 
 Command line tool collection for MARC record files.
 
