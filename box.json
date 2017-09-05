@@ -1,0 +1,10 @@
+{
+    "alias": "marcli.phar",
+    "chmod": "0755",
+    "files": [ "marcli.php" ],
+    "directories": [ "src", "vendor" ],
+    "extract": true,
+    "main": "bin/main",
+    "output": "phar/marcli.phar",
+    "stub": true
+}
