@@ -18,7 +18,7 @@ class MapReadCommand extends Command {
         $this
             ->setName( 'map:read' )
             ->setDescription( 'Reads a record from a lookup table created by map:write.' )
-            ->addArgument( 'record-id', InputArgument::REQUIRED, 'The record id. Probably the OCLC number (without prefix)' )
+            ->addArgument( 'record-id', InputArgument::REQUIRED, 'The record id. Probably the OCLC number.' )
             ->addArgument( 'marc-file', InputArgument::REQUIRED, 'Path to MARC file' )
             ->addArgument( 'sqlite-file', InputArgument::REQUIRED, 'Path to SQLite file' )
             ->addOption( 'raw', 'r', InputOption::VALUE_NONE, 'Raw MARC output?' );
@@ -28,13 +28,15 @@ class MapReadCommand extends Command {
         $db = new \SQLite3( $input->getArgument( 'sqlite-file' ) );
         $mr = new MarcMapReader( $input->getArgument( 'marc-file' ), $db );
         try {
-            $record = $mr->get( (int) $input->getArgument( 'record-id' ) );
-            if ( $input->getOption( 'raw' ) ) {
-                $output->writeln( $record->toRaw() );
-            } else {
-                $output->writeln(
-                    MarcDump::formatDump( (string) $record )
-                );
+            $records = $mr->get( $input->getArgument( 'record-id' ) );
+            foreach ( $records as $record ) {
+                if ( $input->getOption( 'raw' ) ) {
+                        $output->writeln( $record->toRaw() );
+                } else {
+                    $output->writeln(
+                        MarcDump::formatDump( (string) $record )
+                    );
+                }
             }
         } catch ( MarcRecordNotFoundException $e ) {
             $output->writeln( 'Record not found.' );
