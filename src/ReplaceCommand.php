@@ -38,12 +38,12 @@ class ReplaceCommand extends Command {
                     $input->getArgument( 'needle' )
                 );
 
-        $mf = new MarcReplace( $input->getArgument( 'marc-file' ), $mask );
+        $mr = new MarcReplace( $input->getArgument( 'marc-file' ), $mask, $input->getArgument( 'replace' ) );
 
         if ( $input->getOption( 'raw' ) ) {
-            $mf->replaceAndEchoRaw( $input->getArgument( 'replace' ) );
+            $mr->echoRaw();
         } else {
-            $mf->replaceAndEchoDump( $input->getArgument( 'replace' ), !$input->getOption( 'no-ansi' ) );
+            $mr->echoDump( !$input->getOption( 'no-ansi' ) );
         }
     }
 
