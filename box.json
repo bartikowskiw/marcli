@@ -10,13 +10,13 @@
     "finder": [
         {
             "name": "*.php",
-            "exclude": ["tests","test"],
+            "exclude": ["test"],
             "in": "vendor"
         }
     ],
     "extract": true,
     "git-version": "package_version",
     "main": "bin/main",
-    "output": "marcli.phar",
+    "output": "phar/marcli.phar",
     "stub": true
 }
