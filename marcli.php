@@ -30,7 +30,7 @@ use Umlts\Marcli\ReplaceCommand;
 use Umlts\Marcli\MapWriteCommand;
 use Umlts\Marcli\MapReadCommand;
 
-$app = new Application( MARCLI_BANNER, 'dev' );
+$app = new Application( MARCLI_BANNER, '@package_version@' );
 
 $app->add( new DumpCommand() );
 $app->add( new CountCommand() );
