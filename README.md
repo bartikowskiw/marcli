@@ -25,11 +25,11 @@ marcli marc:count random.mrc
 
 ```
 
-## Find, Find & replace
+## Find / Find & replace
 
 ```sh
 marcli marc:find beef random.mrc
-marcli marc:replace beef port random.mrc
+marcli marc:replace beef pork random.mrc
 ```
 
 ## Using stdio & pipes
