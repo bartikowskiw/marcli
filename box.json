@@ -1,9 +1,21 @@
 {
     "alias": "marcli.phar",
     "chmod": "0755",
+    "compactors": [
+        "Herrera\\Box\\Compactor\\Json",
+        "Herrera\\Box\\Compactor\\Php"
+    ],
     "files": [ "marcli.php" ],
     "directories": [ "src", "vendor" ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": ["tests","test"],
+            "in": "vendor"
+        }
+    ],
     "extract": true,
+    "git-version": "package_version",
     "main": "bin/main",
     "output": "phar/marcli.phar",
     "stub": true
