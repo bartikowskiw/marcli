@@ -12,14 +12,7 @@ is to create a shell script in ```~/bin```.
 php /path/to/marcli.php "$@"
 ```
 
-or
-
-```bash
-#!/bin/bash
-/path/to/marcli.phar "$@"
-```
-
-when using the phar archive.
+Moving the phar archive to ~/bin is also an simple option.
 
 ## Basic MARC functions
 
