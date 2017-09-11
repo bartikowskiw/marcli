@@ -1,0 +1,11 @@
+phar/
+vendor/
+data/
+logs/*
+config/config.json
+phpunit
+test.php
+*.geany
+*.phar
+*~
+*#
