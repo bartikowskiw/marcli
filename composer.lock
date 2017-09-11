@@ -464,7 +464,7 @@
             "source": {
                 "type": "git",
                 "url": "https://vcs.missouri.edu/umlts/phplib/marc_toolset.git",
-                "reference": "e662a4d15682124eaae85ab5aaacd070db5275a4"
+                "reference": "c52d7287d0c0d5845132d76b19d222fb3dd3ff89"
             },
             "require": {
                 "pear/file_marc": "^1.1",
@@ -485,7 +485,7 @@
                     "email": "bartikowskiw@missouri.edu"
                 }
             ],
-            "time": "2017-09-08 21:48:31"
+            "time": "2017-09-08 21:54:02"
         }
     ],
     "packages-dev": [],
