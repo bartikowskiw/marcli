@@ -7,7 +7,7 @@ if ( version_compare( phpversion(), '7.0', '<' ) ) {
 }
 
 
-// http://www.patorjk.com/software/taag/#f=Elite&t=MarCLI
+// @see: http://www.patorjk.com/software/taag/#f=Elite&t=MarCLI
 define( 'MARCLI_BANNER', "\e[33m
  • ▌ ▄ ·.  ▄▄▄· ▄▄▄   ▄▄· ▄▄▌  ▪
  ·██ ▐███▪▐█ ▀█ ▀▄ █·▐█ ▌▪██•  ██
