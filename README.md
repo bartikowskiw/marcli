@@ -22,6 +22,14 @@ marcli marc:dump random.mrc
 
 # Echo the number of record inside the file
 marcli marc:count random.mrc
+
+```
+
+## Find, Find & replace
+
+```sh
+marcli marc:find beef random.mrc
+marcli marc:replace beef port random.mrc
 ```
 
 ## Using stdio & pipes
