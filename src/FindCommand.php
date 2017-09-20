@@ -16,7 +16,7 @@ class FindCommand extends Command {
     protected function configure() {
 
         $this
-            ->setName( 'marc:find' )
+            ->setName( 'search:find' )
             ->setDescription( 'Finds records.' )
             ->addArgument( 'needle', InputArgument::REQUIRED, 'Needle (PCRE expression)' )
             ->addArgument( 'marc-file', InputArgument::OPTIONAL, 'Path to MARC file', 'php://stdin' )

@@ -16,7 +16,7 @@ class ReplaceCommand extends Command {
     protected function configure() {
 
         $this
-            ->setName( 'marc:replace' )
+            ->setName( 'search:replace' )
             ->setDescription( 'Finds and replaces fields in records.' )
             ->addArgument( 'needle', InputArgument::REQUIRED, 'Needle (PCRE expression)' )
             ->addArgument( 'replace', InputArgument::REQUIRED, 'Replacement. See <https://secure.php.net/manual/en/function.preg-replace.php>.' )
