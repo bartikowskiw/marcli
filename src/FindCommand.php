@@ -24,7 +24,8 @@ class FindCommand extends Command {
             ->addOption( 'ind1', NULL, InputOption::VALUE_REQUIRED, 'Indicator 1', '.' )
             ->addOption( 'ind2', NULL, InputOption::VALUE_REQUIRED, 'Indicator 2', '.' )
             ->addOption( 'sub', 's', InputOption::VALUE_REQUIRED, 'Subfield', '.' )
-            ->addOption( 'raw', 'r', InputOption::VALUE_NONE, 'Raw MARC output?' );
+            ->addOption( 'raw', 'r', InputOption::VALUE_NONE, 'Raw MARC output?' )
+            ->addOption( 'invert', 'i', InputOption::VALUE_NONE, 'Invert results? Shows only records that do *not* match.' );
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
@@ -35,6 +36,8 @@ class FindCommand extends Command {
                     $input->getOption( 'sub' ),
                     $input->getArgument( 'needle' )
                 );
+
+        $mask->setInvert( $input->getOption( 'invert' ) );
 
         $mf = new MarcFind( $input->getArgument( 'marc-file' ), $mask );
 
