@@ -29,6 +29,8 @@ use Umlts\Marcli\FindCommand;
 use Umlts\Marcli\ReplaceCommand;
 use Umlts\Marcli\MapWriteCommand;
 use Umlts\Marcli\MapReadCommand;
+use Umlts\Marcli\BoolAndCommand;
+use Umlts\Marcli\BoolNotCommand;
 
 $app = new Application( MARCLI_BANNER, '@package_version@' );
 
@@ -39,5 +41,7 @@ $app->add( new FindCommand() );
 $app->add( new ReplaceCommand() );
 $app->add( new MapWriteCommand() );
 $app->add( new MapReadCommand() );
+$app->add( new BoolAndCommand() );
+$app->add( new BoolNotCommand() );
 
 $app->run();
