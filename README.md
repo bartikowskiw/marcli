@@ -32,6 +32,36 @@ marcli marc:find beef random.mrc
 marcli marc:replace beef pork random.mrc
 ```
 
+#### Narrowing the search
+
+The search can be narrowed by tag, subfield, and indicators
+
+```sh
+# Returns records with the needle "beef" in the MARC field 245 (which
+# usually stores titles)
+marcli marc:find --tag=245 beef random.mrc
+```
+
+#### Leader
+
+The leader has its own special tag "LDR" or "LEADER":
+
+```sh
+# Returns records with set "d" (delete) flag in the leader
+marcli marc:find --tag=LDR "^.....d" random.mrc
+```
+
+### Boolean operations
+
+```sh
+# Returns records that exist in both MARC files (according to the id
+# in the MARC 001 field).
+marcli bool:add random.mrc random2.mrc
+
+# Returns records that do exist in the first file but not in the second.
+marcli bool:not random.mrc random2.mrc
+```
+
 ## Using stdio & pipes
 
 ```sh
@@ -48,9 +78,9 @@ cat random.mrc | marcli marc:find --raw needle > needle.mrc
 ## Lookup table
 
 MARC files can get quite large. This function creates a SQLite database
-where the id (just the numeric part) in the 001 field and the position
-of the corresponding record in the file are saved. This makes searching
-for a records with a given id fast.
+where the id in the 001 field and the position of the corresponding
+record in the file are saved. This makes searching for a records with a
+given id fast.
 
 ```sh
 marcli map:write random.mrc db.sqlite
