@@ -32,7 +32,7 @@ marcli marc:find beef random.mrc
 marcli marc:replace beef pork random.mrc
 ```
 
-#### Narrowing the search
+### Narrowing the search
 
 The search can be narrowed by tag, subfield, and indicators
 
@@ -42,7 +42,7 @@ The search can be narrowed by tag, subfield, and indicators
 marcli marc:find --tag=245 beef random.mrc
 ```
 
-#### Leader
+### Leader
 
 The leader has its own special tag "LDR" or "LEADER":
 
@@ -51,7 +51,7 @@ The leader has its own special tag "LDR" or "LEADER":
 marcli marc:find --tag=LDR "^.....d" random.mrc
 ```
 
-### Boolean operations
+## Boolean operations
 
 ```sh
 # Returns records that exist in both MARC files (according to the id
