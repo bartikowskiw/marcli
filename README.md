@@ -4,23 +4,20 @@ Command line tool collection for MARC record files.
 
 ## Installation
 
-### Ubuntu / PPA
-
 Marcli has its own Package in the [UMLTS Private Package Archives (PPA)](https://launchpad.net/~umlts/+archive/ubuntu/marcli). Installing Marcli under Ubuntu is fairly simple:
 
 ```sh
 sudo add-apt-repository ppa:umlts/marcli
 sudo apt-get update
 sudo apt-get install marcli
-
 ```
 
-## Use the phar archive
+### Use the phar archive
 
 The phar archive is part of the [*release* branch of this repository](https://vcs.missouri.edu/bartikowskiw/marcli/tree/release).
 You can download the file there.
 
-## Manual installation
+### Manual installation
 
 Download Marcli via git:
 
