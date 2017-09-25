@@ -2,7 +2,40 @@
 
 Command line tool collection for MARC record files.
 
-## Make Marcli globally executable
+## Installation
+
+### Ubuntu / PPA
+
+Marcli has its own Package in the [UMLTS Private Package Archives (PPA)](https://launchpad.net/~umlts/+archive/ubuntu/marcli). Installing Marcli under Ubuntu is fairly simple:
+
+```sh
+sudo add-apt-repository ppa:umlts/marcli
+sudo apt-get update
+sudo apt-get install marcli
+
+```
+
+## Use the phar archive
+
+The phar archive is part of the [*release* branch of this repository](https://vcs.missouri.edu/bartikowskiw/marcli/tree/release).
+You can download the file there.
+
+## Manual installation
+
+Download Marcli via git:
+
+```sh
+git clone https://vcs.missouri.edu/bartikowskiw/marcli.git
+```
+
+Change into the Marcli direcory and get the dependencies:
+
+```sh
+cd marcli
+composer --no-dev install
+```
+
+### Make Marcli globally executable
 
 Making Marcli globally executable makes living easier. The simplest way
 is to create a shell script in ```~/bin```.
