@@ -19,7 +19,7 @@ class BoolNotCommand extends Command {
             ->setDescription( 'Removes duplicate records. Returns records from the first file.' )
             ->addArgument( 'marc-file1', InputArgument::REQUIRED, 'Path to MARC first file' )
             ->addArgument( 'marc-file2', InputArgument::OPTIONAL, 'Path to MARC second file', 'php://stdin' )
-            ->addOption( 'raw', 'r', InputOption::VALUE_NONE, 'Raw MARC output?' );;
+            ->addOption( 'raw', 'r', InputOption::VALUE_NONE, 'Raw MARC output?' );
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
