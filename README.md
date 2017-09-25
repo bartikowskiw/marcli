@@ -7,5 +7,6 @@ Release of MarCLI phar archives.
 ## Check the GPG signature:
 
 ```sh
-gpg --verify marcli.phar.asc marcli.phar
+gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys 8DCCB87D
+gpg --verify marcli.phar.sig marcli.phar
 ```
