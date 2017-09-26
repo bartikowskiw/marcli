@@ -17,8 +17,8 @@ class BoolAndCommand extends Command {
         $this
             ->setName( 'bool:and' )
             ->setDescription( 'Records that are in both files. Returns records from the first file.' )
-            ->addArgument( 'marc-file1', InputArgument::REQUIRED, 'Path to MARC first file' )
-            ->addArgument( 'marc-file2', InputArgument::OPTIONAL, 'Path to MARC second file', 'php://stdin' )
+            ->addArgument( 'marc-file1', InputArgument::REQUIRED, 'Path to first MARC file' )
+            ->addArgument( 'marc-file2', InputArgument::OPTIONAL, 'Path to second MARC file', 'php://stdin' )
             ->addOption( 'raw', 'r', InputOption::VALUE_NONE, 'Raw MARC output?' );
     }
 
