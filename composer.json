@@ -17,8 +17,8 @@
     },
     "repositories": [
         {
-            "type": "composer",
-            "url": "https://vcs.missouri.edu/umlts/composer_repository/raw/master/packages.json"
+            "type": "git",
+            "url": "https://github.com/bartikowskiw/marc_toolset"
         }
     ],
     "require": {

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f4a313e49a0b78010c8f0cb0d936d575",
-    "content-hash": "99c6fee57f7d6b81258f75b260f5a1fb",
+    "hash": "a77e2c581e2ac02050b5fb072e517dd0",
+    "content-hash": "3973e3ffd51c45f5001075e1df45539d",
     "packages": [
         {
             "name": "pear/file_marc",
@@ -463,7 +463,7 @@
             "version": "v0.1",
             "source": {
                 "type": "git",
-                "url": "https://vcs.missouri.edu/umlts/phplib/marc_toolset.git",
+                "url": "https://github.com/bartikowskiw/marc_toolset",
                 "reference": "8197c74aebea0a3f3f2886896465b2fba404a90f"
             },
             "require": {
