@@ -1,6 +1,6 @@
 {
     "name": "umlts/marcli",
-    "description": "MARC file toolset",
+    "description": "Command Line Tools for MARC files",
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
