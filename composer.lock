@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b0cab56fd6d2001bfa9dc389309ca54",
-    "content-hash": "2fa1eb3ae773d2f110f3a56ae90f67df",
+    "hash": "f4a313e49a0b78010c8f0cb0d936d575",
+    "content-hash": "99c6fee57f7d6b81258f75b260f5a1fb",
     "packages": [
         {
             "name": "pear/file_marc",
@@ -460,11 +460,11 @@
         },
         {
             "name": "umlts/marc_toolset",
-            "version": "dev-master",
+            "version": "v0.1",
             "source": {
                 "type": "git",
                 "url": "https://vcs.missouri.edu/umlts/phplib/marc_toolset.git",
-                "reference": "2e6897a0ec5961e43aff9226c6d4cfc96d3db54a"
+                "reference": "8197c74aebea0a3f3f2886896465b2fba404a90f"
             },
             "require": {
                 "ext-xml": "*",
@@ -487,15 +487,13 @@
                     "email": "bartikowskiw@missouri.edu"
                 }
             ],
-            "time": "2017-10-11 16:38:21"
+            "time": "2017-10-11 16:38:54"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "umlts/marc_toolset": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

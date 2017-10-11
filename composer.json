@@ -22,7 +22,7 @@
         }
     ],
     "require": {
-        "umlts/marc_toolset": "@dev",
+        "umlts/marc_toolset": ">=0.1",
         "symfony/console": "^3.3"
     }
 }
