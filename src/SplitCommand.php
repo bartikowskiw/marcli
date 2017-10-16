@@ -30,29 +30,16 @@ class SplitCommand extends Command {
         $ms = new MarcSplit( $input->getArgument( 'marc-file' ) );
 
         $ms
-            ->setOutputDir( $input->getOption( 'output-dir' ) );
+            ->setOutputDir( $input->getOption( 'output-dir' ) )
+            ->setEnumLength( (int) $input->getOption( 'enum-length' ) )
+        ;
 
+        if ( $input->getOption( 'enum-type-chars' ) ) {
+            $ms
+                ->setEnumChars( implode( range( 'a', 'z' ) )  );
+        }
 
         $ms->split( (int) $input->getArgument( 'size' ) );
-
-
-        /*$mask = new MarcMask(
-                    $input->getOption( 'tag' ),
-                    $input->getOption( 'ind1' ),
-                    $input->getOption( 'ind2' ),
-                    $input->getOption( 'sub' ),
-                    $input->getArgument( 'needle' )
-                );
-
-        $mask->setInvert( $input->getOption( 'invert' ) );
-
-        $mf = new MarcFind( $input->getArgument( 'marc-file' ), $mask );
-
-        if ( $input->getOption( 'raw' ) ) {
-            $mf->echoRaw();
-        } else {
-            $mf->echoDump( !$input->getOption( 'no-ansi' ) );
-        }*/
     }
 
 }
