@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a77e2c581e2ac02050b5fb072e517dd0",
     "content-hash": "3973e3ffd51c45f5001075e1df45539d",
     "packages": [
         {
@@ -52,7 +51,7 @@
                 }
             ],
             "description": "Supports the MAchine Readable Cataloging (MARC) file format documented at http://loc.gov/marc/",
-            "time": "2017-01-23 16:49:13"
+            "time": "2017-01-23T16:49:13+00:00"
         },
         {
             "name": "pear/pear_exception",
@@ -107,7 +106,7 @@
             "keywords": [
                 "exception"
             ],
-            "time": "2015-02-10 20:07:52"
+            "time": "2015-02-10T20:07:52+00:00"
         },
         {
             "name": "pear/validate",
@@ -178,7 +177,7 @@
             ],
             "description": "Validate numbers, email, strings, dates, URIs and more",
             "homepage": "http://pear.php.net/package/Validate",
-            "time": "2015-02-20 09:16:13"
+            "time": "2015-02-20T09:16:13+00:00"
         },
         {
             "name": "pear/validate_ispn",
@@ -226,7 +225,7 @@
                 }
             ],
             "description": "More info available on: http://pear.php.net/package/Validate_ISPN",
-            "time": "2015-04-14 04:17:31"
+            "time": "2015-04-14T04:17:31+00:00"
         },
         {
             "name": "psr/log",
@@ -273,7 +272,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10 12:19:37"
+            "time": "2016-10-10T12:19:37+00:00"
         },
         {
             "name": "symfony/console",
@@ -341,7 +340,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-02 06:42:24"
+            "time": "2017-10-02T06:42:24+00:00"
         },
         {
             "name": "symfony/debug",
@@ -397,20 +396,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2017-10-02 06:42:24"
+            "time": "2017-10-02T06:42:24+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.5.0",
+            "version": "v1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
-                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
+                "reference": "2ec8b39c38cb16674bbf3fea2b6ce5bf117e1296",
                 "shasum": ""
             },
             "require": {
@@ -422,7 +421,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -456,7 +455,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-06-14 15:44:48"
+            "time": "2017-10-11T12:05:26+00:00"
         },
         {
             "name": "umlts/marc_toolset",
@@ -487,7 +486,7 @@
                     "email": "bartikowskiw@missouri.edu"
                 }
             ],
-            "time": "2017-10-11 16:38:54"
+            "time": "2017-10-11T16:38:54+00:00"
         }
     ],
     "packages-dev": [],
