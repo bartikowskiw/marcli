@@ -14,7 +14,7 @@ sudo apt-get install marcli
 
 ### Use the phar archive
 
-The phar archive is part of the [*release* branch of this repository](https://vcs.missouri.edu/bartikowskiw/marcli/tree/release).
+The phar archive is part of the [*release* branch of this repository](tree/release).
 You can download the file there.
 
 ### Manual installation
@@ -22,7 +22,7 @@ You can download the file there.
 Download Marcli via git:
 
 ```sh
-git clone https://vcs.missouri.edu/bartikowskiw/marcli.git
+git clone https://github.com/bartikowskiw/marcli.git
 ```
 
 Change into the Marcli direcory and get the dependencies:
