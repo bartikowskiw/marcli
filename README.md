@@ -14,7 +14,7 @@ sudo apt-get install marcli
 
 ### Use the phar archive
 
-The phar archive is part of the [*release* branch of this repository](tree/release).
+The phar archive is part of the [*release* branch of this repository](https://github.com/bartikowskiw/marcli/tree/release).
 You can download the file there.
 
 ### Manual installation
