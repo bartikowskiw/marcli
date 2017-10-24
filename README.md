@@ -25,7 +25,7 @@ Download Marcli via git:
 git clone https://github.com/bartikowskiw/marcli.git
 ```
 
-Change into the Marcli direcory and get the dependencies:
+Change into the Marcli directory and get the dependencies:
 
 ```sh
 cd marcli
