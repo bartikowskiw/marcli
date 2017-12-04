@@ -24,5 +24,8 @@
     "require": {
         "umlts/marc_toolset": ">=0.1",
         "symfony/console": "^3.3"
+    },
+    "require-dev": {
+        "bamarni/symfony-console-autocomplete": "^1.2"
     }
 }
