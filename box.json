@@ -6,7 +6,7 @@
         "Herrera\\Box\\Compactor\\Php"
     ],
     "files": [ "marcli.php" ],
-    "directories": [ "src", "vendor" ],
+    "directories": [ "src", "vendor", "scripts" ],
     "finder": [
         {
             "name": "*.php",

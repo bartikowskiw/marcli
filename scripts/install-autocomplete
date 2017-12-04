@@ -1,0 +1,65 @@
+#!/usr/bin/env bash
+SCRIPT_DIR=$( dirname "$(readlink -f "$0")" )
+AFILE="$SCRIPT_DIR/marcli_autocomplete"
+
+# Check if autocomplete file exists
+test -r "$AFILE" || {
+    echo "Autocomplete file \"$AFILE\" not found."
+    echo "Try \"git autocomplete-update\" first.";
+    exit 1;
+}
+
+case "$1" in
+
+    debian|ubuntu)
+        # Debian / Ubuntu bash, global
+        
+        BASH_AUTOCOMPLETION_DIR="/etc/bash_completion.d/"
+        
+        # Check the directory
+        sudo test -d "$BASH_AUTOCOMPLETION_DIR" || {
+            echo "$BASH_AUTOCOMPLETION_DIR does not exist."
+            exit 1
+        }
+        sudo test -w "$BASH_AUTOCOMPLETION_DIR" || {
+            echo "$BASH_AUTOCOMPLETION_DIR is not writeable."
+            exit 1
+        }
+        
+        # Copy the autocomplete file
+        sudo cp "$AFILE" "$BASH_AUTOCOMPLETION_DIR"
+        ;;
+        
+    mac)
+        # Mac OSX, Homebrew "bash-completion"
+        which brew || {
+            echo "Homebrew not installed.";
+            exit 1;
+        }
+        
+        BREW_AUTOCOMPLETION_DIR="$(brew --prefix)/etc/bash_completion.d/"
+        
+        # Check the directory
+        test -d "$BREW_AUTOCOMPLETION_DIR" || {
+            echo "Bash completion not installed."
+            echo "Try"
+            echo "  $ brew install bash-completion"
+            echo "  $ brew tap homebrew/completions"
+            echo "then follow the instructions."
+        }
+        test -w "$BREW_AUTOCOMPLETION_DIR" || {
+            echo "$BREW_AUTOCOMPLETION_DIR is not writeable."
+            exit 1
+        }
+        
+        # Copy the autocomplete file
+        cp "$AFILE" "$BREW_AUTOCOMPLETION_DIR/marcli"
+        ;;
+        
+    *)
+        echo "Installs the autocomplete functionality."
+        echo "${0} debian|ubuntu|mac";
+        exit 1
+        
+esac
+
