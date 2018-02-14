@@ -14,7 +14,7 @@ case "$1" in
     debian|ubuntu)
         # Debian / Ubuntu bash, global
         
-        BASH_AUTOCOMPLETION_DIR="/etc/bash_completion.d/"
+        BASH_AUTOCOMPLETION_DIR="/usr/share/bash-completion/completions"
         
         # Check the directory
         sudo test -d "$BASH_AUTOCOMPLETION_DIR" || {
@@ -27,7 +27,7 @@ case "$1" in
         }
         
         # Copy the autocomplete file
-        sudo cp "$AFILE" "$BASH_AUTOCOMPLETION_DIR"
+        sudo cp "$AFILE" "$BASH_AUTOCOMPLETION_DIR/marcli"
         ;;
         
     mac)
