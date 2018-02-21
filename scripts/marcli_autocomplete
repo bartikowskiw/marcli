@@ -39,7 +39,7 @@ _marcli()
             opts="${opts} --raw"
             ;;
             map:read)
-            opts="${opts} --raw"
+            opts="${opts} --raw --regexp"
             ;;
             map:write)
             opts="${opts} "
