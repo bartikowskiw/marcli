@@ -81,6 +81,16 @@ The leader has its own special tag "LDR" or "LEADER":
 marcli marc:find --tag=LDR "^.....d" random.mrc
 ```
 
+### Regular expressions
+
+The search accepts PCRE [regular expressions]https://secure.php.net/manual/en/reference.pcre.pattern.syntax.php).
+This would look for record that contain the word "beef" or "pork" in any
+field:
+
+```sh
+    marcli marc:find "(beef|pork)" random.mrc
+```
+
 ## Boolean operations
 
 ```sh
@@ -113,6 +123,17 @@ record in the file are saved. This makes searching for a records with a
 given id fast.
 
 ```sh
-marcli map:write random.mrc db.sqlite
-marcli map:read 123456 random.mrc db.sqlite
+marcli map:write random.mrc
+marcli map:read 123456 random.mrc
 ```
+
+The `map:read` command supports regular expressions. The `--regexp` 
+option turns this feature on:
+
+```sh
+marcli map:read --regexp "12345[0-3]" random.mrc
+```
+
+This command searches for the ids 123450, 123451, 123452, and 123453.
+Regular expressions should only be switched on if really needed. They
+significantly slow the lookups down.
