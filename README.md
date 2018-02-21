@@ -83,7 +83,7 @@ marcli marc:find --tag=LDR "^.....d" random.mrc
 
 ### Regular expressions
 
-The search accepts PCRE [regular expressions]https://secure.php.net/manual/en/reference.pcre.pattern.syntax.php).
+The search accepts PCRE [regular expressions](https://secure.php.net/manual/en/reference.pcre.pattern.syntax.php).
 This would look for record that contain the word "beef" or "pork" in any
 field:
 
