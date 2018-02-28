@@ -23,6 +23,18 @@ class BoolAndCommand extends Command {
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
+
+        if ( !is_readable( $input->getArgument( 'marc-file1' ) ) ) {
+            echo 'Cannot read "' . $input->getArgument( 'marc-file1' ) . '"', PHP_EOL;
+            exit(1);
+        }
+
+        if ( $input->getArgument( 'marc-file2' ) !== 'php://stdin'
+            && !is_readable( $input->getArgument( 'marc-file2' ) ) ) {
+              echo 'Cannot read "' . $input->getArgument( 'marc-file2' ) . '"', PHP_EOL;
+              exit(1);
+        }
+
         $bool = new MarcBool( $input->getArgument( 'marc-file1' ), $input->getArgument( 'marc-file2' ) );
         $bool->boolAnd();
         if ( $input->getOption( 'raw' ) ) {

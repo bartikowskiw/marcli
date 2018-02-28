@@ -28,6 +28,12 @@ class MapWriteCommand extends Command {
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
+
+        if ( !is_readable( $input->getArgument( 'marc-file' ) ) ) {
+            echo 'Cannot read "' . $input->getArgument( 'marc-file' ) . '"', PHP_EOL;
+            exit(1);
+        }
+
         $db = new \SQLite3( $input->getArgument( 'sqlite_file' ) );
         $mw = new MarcMapWriter( $input->getArgument( 'marc_file' ), $db );
         $mw->map();

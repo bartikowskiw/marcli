@@ -29,6 +29,13 @@ class FindCommand extends Command {
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
+
+        if ( $input->getArgument( 'marc-file' ) !== 'php://stdin'
+          && !is_readable( $input->getArgument( 'marc-file' ) ) ) {
+            echo 'Cannot read "' . $input->getArgument( 'marc-file' ) . '"', PHP_EOL;
+            exit(1);
+        }
+
         $mask = new MarcMask(
                     $input->getOption( 'tag' ),
                     $input->getOption( 'ind1' ),

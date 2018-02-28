@@ -22,6 +22,13 @@ class DuplicatesCommand extends Command {
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
+        
+        if ( $input->getArgument( 'marc-file' ) !== 'php://stdin'
+            && !is_readable( $input->getArgument( 'marc-file' ) ) ) {
+              echo 'Cannot read "' . $input->getArgument( 'marc-file' ) . '"', PHP_EOL;
+              exit(1);
+          }
+
         $dup = new MarcDuplicates( $input->getArgument( 'marc-file' ) );
         $dup->findDuplicates();
         if ( $input->getOption( 'raw' ) ) {
