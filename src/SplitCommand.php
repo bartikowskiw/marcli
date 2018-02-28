@@ -28,10 +28,10 @@ class SplitCommand extends Command {
     protected function execute( InputInterface $input, OutputInterface $output ) {
 
         if ( $input->getArgument( 'marc-file' ) !== 'php://stdin'
-            && !is_readable( $input->getArgument( 'marc-file' ) ) ) {
-              echo 'Cannot read "' . $input->getArgument( 'marc-file' ) . '"', PHP_EOL;
-              exit(1);
-          }
+          && !is_readable( $input->getArgument( 'marc-file' ) ) ) {
+            echo 'Cannot read "' . $input->getArgument( 'marc-file' ) . '"', PHP_EOL;
+            exit(1);
+        }
 
         $ms = new MarcSplit( $input->getArgument( 'marc-file' ) );
 
