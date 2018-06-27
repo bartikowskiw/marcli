@@ -113,7 +113,7 @@ marcli marc:split 1000 random.mrc
 marcli marc:split --output-dir=/tmp 1000 random.mrc
 
 # Split random.mrc, use characters instead of numbers for enumeration
-marcli marc:split --enym-type-chars 1000 random.mrc
+marcli marc:split --enum-type-chars 1000 random.mrc
 ```
 
 ## Boolean operations
