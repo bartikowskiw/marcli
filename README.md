@@ -91,6 +91,31 @@ field:
     marcli marc:find "(beef|pork)" random.mrc
 ```
 
+## Search for duplicates
+
+Looks for duplicate MARC records. Records are regarded as duplicate
+if they share the 001 MARC field with other records. Marcli returns
+all records with the same identifier.
+
+```sh
+marcli search:duplicates random.mrc
+```
+
+## Split record set
+
+Split MARC files into chunks of a certain size.
+
+```sh
+# Split random.mrc into chunks of 1,000 records each
+marcli marc:split 1000 random.mrc
+
+# Split random.mrc and save the resulting files into another folder
+marcli marc:split --output-dir=/tmp 1000 random.mrc
+
+# Split random.mrc, use characters instead of numbers for enumeration
+marcli marc:split --enym-type-chars 1000 random.mrc
+```
+
 ## Boolean operations
 
 ```sh
