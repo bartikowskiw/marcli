@@ -16,26 +16,31 @@ class MapWriteCommand extends Command {
         $this
             ->setName( 'map:write' )
             ->setDescription( 'Creates a SQLite DB with the ids and positions of the records.' )
-            ->addArgument( 'marc_file', InputArgument::REQUIRED, 'Path to MARC file' )
-            ->addArgument( 'sqlite_file', InputArgument::OPTIONAL, 'Path to SQLite file. Defaults to the MARC file name with added ".db" extension.' );
+            ->addArgument( 'marc-file', InputArgument::REQUIRED, 'Path to MARC file' )
+            ->addArgument( 'sqlite-file', InputArgument::OPTIONAL, 'Path to SQLite file. Defaults to the MARC file name with added ".db" extension.' );
 
     }
 
     protected function initialize( InputInterface $input, OutputInterface $output ) {
-        if ( empty( $input->getArgument( 'sqlite_file' ) ) ) {
-            $input->setArgument( 'sqlite_file', $input->getArgument( 'marc_file'  ) . '.db' );
+        if ( empty( $input->getArgument( 'sqlite-file' ) ) ) {
+            $input->setArgument( 'sqlite-file', $input->getArgument( 'marc_file'  ) . '.db' );
         }
     }
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
 
-        if ( !is_readable( $input->getArgument( 'marc_file' ) ) ) {
-            echo 'Cannot read "' . $input->getArgument( 'marc_file' ) . '"', PHP_EOL;
+        if ( !is_readable( $input->getArgument( 'marc-file' ) ) ) {
+            echo 'Cannot read "' . $input->getArgument( 'marc-file' ) . '".', PHP_EOL;
             exit(1);
         }
 
-        $db = new \SQLite3( $input->getArgument( 'sqlite_file' ) );
-        $mw = new MarcMapWriter( $input->getArgument( 'marc_file' ), $db );
+        if ( !is_writeable( $input->getArgument( 'sqlite-file' ) ) ) {
+            echo 'Cannot write to "' . $input->getArgument( 'sqlite-file' ) . '".', PHP_EOL;
+            exit(1);
+        }
+
+        $db = new \SQLite3( $input->getArgument( 'sqlite-file' ) );
+        $mw = new MarcMapWriter( $input->getArgument( 'marc-file' ), $db );
         $mw->map();
     }
 
