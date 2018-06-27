@@ -91,7 +91,7 @@ field:
     marcli marc:find "(beef|pork)" random.mrc
 ```
 
-## Search for duplicates
+### Search for duplicates
 
 Looks for duplicate MARC records. Records are regarded as duplicate
 if they share the 001 MARC field with other records. Marcli returns
