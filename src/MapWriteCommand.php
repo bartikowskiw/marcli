@@ -29,8 +29,8 @@ class MapWriteCommand extends Command {
 
     protected function execute( InputInterface $input, OutputInterface $output ) {
 
-        if ( !is_readable( $input->getArgument( 'marc-file' ) ) ) {
-            echo 'Cannot read "' . $input->getArgument( 'marc-file' ) . '"', PHP_EOL;
+        if ( !is_readable( $input->getArgument( 'marc_file' ) ) ) {
+            echo 'Cannot read "' . $input->getArgument( 'marc_file' ) . '"', PHP_EOL;
             exit(1);
         }
 
