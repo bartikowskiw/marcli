@@ -35,7 +35,7 @@ class MapReadCommand extends Command {
     protected function execute( InputInterface $input, OutputInterface $output ) {
 
         if ( !is_readable( $input->getArgument( 'marc-file' ) ) ) {
-            echo 'Cannot read "' . $input->getArgument( 'marc-file' ) . '"', PHP_EOL;
+            $output->writeln( 'Cannot read "' . $input->getArgument( 'marc-file' ) . '"' );
             exit(1);
         }
 

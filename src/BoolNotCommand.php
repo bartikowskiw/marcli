@@ -25,13 +25,13 @@ class BoolNotCommand extends Command {
     protected function execute( InputInterface $input, OutputInterface $output ) {
 
         if ( !is_readable( $input->getArgument( 'marc-file1' ) ) ) {
-            echo 'Cannot read "' . $input->getArgument( 'marc-file1' ) . '"', PHP_EOL;
+            $output->writeln( 'Cannot read "' . $input->getArgument( 'marc-file1' ) . '"' );
             exit(1);
         }
 
         if ( $input->getArgument( 'marc-file2' ) !== 'php://stdin'
           && !is_readable( $input->getArgument( 'marc-file2' ) ) ) {
-            echo 'Cannot read "' . $input->getArgument( 'marc-file2' ) . '"', PHP_EOL;
+            $output->writeln( 'Cannot read "' . $input->getArgument( 'marc-file2' ) . '"' );
             exit(1);
         }
 
