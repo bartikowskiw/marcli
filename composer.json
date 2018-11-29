@@ -31,6 +31,7 @@
         "symfony/console": "^3.3"
     },
     "require-dev": {
-        "bamarni/symfony-console-autocomplete": "^1.2"
+        "bamarni/symfony-console-autocomplete": "^1.2",
+        "phpunit/phpunit": "^7.4"
     }
 }
